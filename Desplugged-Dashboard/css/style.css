@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Header grafico */
+header {
+    grid-area: header;
+}
+
+
+.navbar {
+    transition: all 0.5s;
+}
+
+
+.navbar-scrolled {
+    background-color: rgb(63, 110, 252);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-brand,
+.navbar-dark .home-link {
+  color: transparent;
+}
+
+.navbar-dark.navbar-scrolled .navbar-nav .nav-link,
+.navbar-dark.navbar-scrolled .navbar-brand,
+.navbar-dark.navbar-scrolled .home-link {
+  color: white; 
+}
+
+.navbar-nav {
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: row;                        ;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px; 
+}
+
+.navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+main { 
+ 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: #fff;
+}
+footer {
+    grid-area: footer;
+    background-color: #3484fb;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; 
+}
+main.main2 {
+    grid-area: main2;
+    background-color: #0a0a0a;
+}
+
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text {
+    max-width: 37rem;
+}
+
+.home-text .text-h4 {
+    font-size: 1.5rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+}
+
+.home-text .text-h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+
+.home-text p {
+    margin-bottom: 4rem;
+}
+
+.home-btn {
+    padding: 15px 45px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.home-btn:hover {
+    background: #fc4c35;
+}
+
+.home-img img {
+    width: 100%;
+}
+/* Footer */
+footer .social-icon,
+footer .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-icon li,
+footer .menu li {
+    list-style: none;
+}
+
+footer .social-icon li a {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social-icon li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../img/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave 4s linear infinite;
+}
+
+.retangulo{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #6c63ff;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 20px;
+    text-align: center;
+}
+/* Grafico */
+canvas {
+    max-width: 400px; 
+    max-height: 400px; 
+    width: 100%; 
+    height: auto; 
+}
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+  }
+.container1 {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    padding: 10%;
+}
+
+/* para alterar tamanho do grafico */
+
+.chart {
+    max-width: 300px; 
+    max-height: 300px; 
+    height: auto; 
+    margin: 40px; 
+
+}
+/* faz com que as waves do footer funcionem  */
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+
+
